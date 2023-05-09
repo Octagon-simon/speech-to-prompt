@@ -1,23 +1,32 @@
 {
-    "name": "Cryptobase",
-    "description": "Cryptobase",
-    "version": "1.1",
+    "name": "Speech To Prompt",
+    "description": "Use your voice to prompt chatgpt!",
+    "version": "1.0",
     "manifest_version": 3,
-    "permissions": [],
-    "host_permissions": [],
     "background": {
-        "service_worker": "background/background.js"
+        "service_worker": "background.js"
     },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "tabs",
+    "unlimitedStorage"
+    ],
     "action": {
-        "default_title": "Cryptobase",
-        "default_icon": "assets/icon-32.png",
-        "default_popup": "popup/popup.html"
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/16x16.png",
+            "32": "/images/32x32.png",
+            "48": "/images/48x48.png",
+            "128": "/images/128x128.png"
+        }
     },
     "icons": {
-        "16": "assets/icon-16.png",
-        "32": "assets/icon-32.png",
-        "48": "assets/icon-48.png",
-        "128": "assets/icon-128.png"
+        "16": "/images/16x16.png",
+        "32": "/images/32x32.png",
+        "48": "/images/48x48.png",
+        "128": "/images/128x128.png"
     },
-    "key": "MIIBIjANBgk..."
+    "options_page": "options.html"
 }
